@@ -38,6 +38,7 @@ function reg(){
              }
         if(user.acc!="" && user.pw!="" && user.pw2!="" && user.email!=""){
             if(user.pw==user.pw2){
+                console.log(res)
                 //AJAX 的寫法
                 $.post("./api/chk_acc.php",{acc:user.acc},(res)=>{
                     if(parseInt(res)==1){
@@ -55,7 +56,7 @@ function reg(){
         }else{
             alert("不可空白")
         }
-        console.log(user);
+        //console.log(user);
 }
         
         
